@@ -4,17 +4,13 @@ function showPage(pageId) {
    
     document.getElementById(pageId).style.display = 'block';
 }
-
+let k=1;
 function func(){
 
 const alphabet=document.getElementById(alpha);
-
-
-let k=document.querySelector(".array").innerHTML;
 let d=arr[k];
-console.log(d);
-console.log(k);
-let str=document.querySelector(".q-1").innerHTML.toString();
+
+let str=document.querySelector(`.q-${k}`).innerHTML.toString();
 console.log(str[1]);
 
 
@@ -24,21 +20,23 @@ for(i=0;i<str.length;i++){
         str = str.replace("_", alphabet.innerHTML);
         if(d[i]==str[i]){
             
-            document.querySelector(".q-1").innerHTML=str;
-            document.querySelector(".symbol").innerHTML="✅"
+            document.querySelector(`.q-${k}`).innerHTML=str;
+            document.querySelector(`.symbol-${k}`).innerHTML="✅"
 
            
       if(d==str){
-    document.querySelector(".levels").innerHTML="You Win!"
-    document.querySelector(".levels").style.color="green"
-    document.querySelector(".levels").stylr.font="bolder"
+    document.querySelector(`.levels-${k}`).innerHTML="You Win!❤️"
+    document.querySelector(`.levels-${k}`).style.color="green"
+    
+    k++;
+    console.log(k)
      }
 
         break
         ;}
         else{
             str = str.replace( str[i],"_");
-            document.querySelector(".symbol").innerHTML="❌"
+            document.querySelector(`.symbol-${k}`).innerHTML="❌"
             
         }
     }
