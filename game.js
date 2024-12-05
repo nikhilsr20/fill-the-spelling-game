@@ -58,7 +58,7 @@ for(i=0;i<str.length;i++){
         "DREAM",
         "ZEBRA",
         "WASHINGTON",
-        "RONALDO"
+        "RONALDO",
     ]
 
 
